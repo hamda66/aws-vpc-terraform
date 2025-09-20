@@ -1,16 +1,11 @@
 
-resource "aws_ami" "test_ami" {
-  name = "test-ami"
-  virtualization_type = "hvm"
-  root_device_name = "ec2-user"
-  imds_support = "v2.0"
+resource "aws_instance" "test_ins" {
+  ## Amazon Linux instance
+  ami = "ami-0971f6afca696ace6"
+  region = var.region
+  
+  subnet_id = aws_subnet.public_subnet.id
 
-  ebs_block_device {
-    device_name = "ec2-user"
-    volume_size = 8
-    
-
-  }
-
+  
 
 }
