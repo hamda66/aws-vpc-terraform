@@ -3,3 +3,8 @@
 /terraform
 .terraform
 .tfstate
+.terraform.lock.*
+.tfstate.*
+.terraform.*
+terraform.tfstate.backup
+terraform.tfstate
