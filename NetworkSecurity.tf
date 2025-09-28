@@ -1,6 +1,6 @@
 
 
-
+// AWS NSG
 resource "aws_security_group" "ec2_security" {
   name = "ec2_secuirty"
   vpc_id = aws_vpc.hamda_vpc.id
