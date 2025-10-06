@@ -18,8 +18,7 @@ resource "aws_vpc_security_group_egress_rule" "egress_rule" {
    security_group_id = aws_security_group.ec2_security.id
    from_port = 0
     to_port = 0
-    ip_protocol = "-1"
+    ip_protocol = "tcp"
     cidr_ipv4 = ["0.0.0.0/0"]
  }
 
-}
