@@ -1,6 +1,6 @@
 
 
-
+// AWS NSG
 resource "aws_security_group" "ec2_security" {
   name = "ec2_secuirty"
   vpc_id = aws_vpc.hamda_vpc.id
@@ -20,4 +20,6 @@ resource "aws_vpc_security_group_egress_rule" "egress_rule" {
     to_port = 0
     ip_protocol = "-1"
     cidr_ipv4 = ["0.0.0.0/0"]
+ }
+
 }
